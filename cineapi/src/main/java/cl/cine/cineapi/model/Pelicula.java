@@ -22,8 +22,8 @@ public class Pelicula {
     @Column(name = "generoPelicula", nullable = false, length = 60)
     private String generoPelicula;
 
-    @Column(name = "fechaEstrenoPelicula", nullable = false, length = 12)
-    private String fechaEstrenoPelicula;
+    @Column(name = "fechaEstrenoPelicula", nullable = false)
+    private int fechaEstrenoPelicula;
 
     @Column(name = "duracionPelicula", nullable = false)
     private int duracionPelicula;
@@ -31,7 +31,7 @@ public class Pelicula {
     
     public Pelicula(){}
 
-    public Pelicula(int id, String nombrePelicula, String generoPelicula, String fechaEstrenoPelicula,
+    public Pelicula(int id, String nombrePelicula, String generoPelicula, int fechaEstrenoPelicula,
             int duracionPelicula) {
         this.id = id;
         this.nombrePelicula = nombrePelicula;
@@ -64,11 +64,11 @@ public class Pelicula {
         this.generoPelicula = generoPelicula;
     }
 
-    public String getFechaEstrenoPelicula() {
+    public int getFechaEstrenoPelicula() {
         return fechaEstrenoPelicula;
     }
 
-    public void setFechaEstrenoPelicula(String fechaEstrenoPelicula) {
+    public void setFechaEstrenoPelicula(int fechaEstrenoPelicula) {
         this.fechaEstrenoPelicula = fechaEstrenoPelicula;
     }
 
